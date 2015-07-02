@@ -1,0 +1,105 @@
+<div>
+
+	<div class="navbar">
+		<ul>
+			<li><a href="#intro">Home</a></li>
+			<li><a href="#request">Request</a></li>
+			<li><a href="#claim">Claim</a></li>
+			<li><a href="#register">Register</a></li>	
+		</ul>
+	</div>
+
+	<div>
+		<p>
+			Filling out this form will generate an email notification to technicians in your area that have indicated they are interested in, and capable of, doing the work that you are requesting.
+		</p>
+		<p>
+			Once the form is filled out you can then expect a qualified technician to contact you within 24 business hours.
+		</p>
+	</div>
+	<form>
+		<fieldset class="requestTuning">
+			<legend>Contact Information: </legend>
+			<div class="contactInfo">
+				<div>First Name: <input name="contactInput" ng-model="newLead.firstName" type="text" placeholder="First Name" required></div>
+				<div>Last Name: <input name="contactInput" ng-model="newLead.lastName" type="text" placeholder="Last Name" required></div>
+				<div>Address: <input name="contactInput" ng-model="newLead.address" type="text" placeholder="Address" required></div>
+				<div>City: <input name="contactInput" ng-model="newLead.city" type="text" placeholder="City" required></div>
+				<div>County: <input name="contactInput" ng-model="newLead.county" type="text" placeholder="County" required></div>
+				<div>State: <input name="contactInput" ng-model="newLead.state" type="text" placeholder="State" required></div>
+				<div>Zip: <input name="contactInput" ng-model="newLead.zip" type="text" placeholder="Zip" required></div>
+				<div>Phone: <input name="contactInput" ng-model="newLead.phone" type="text" placeholder="Phone" required></div>
+				<div>Email: <input name="contactInput" ng-model="newLead.email" type="text" placeholder="Email" required></div>
+			</div>
+		</fieldset>
+		<fieldset class="requestTuning">
+			<legend>Piano Information: </legend>
+			<div class="pianoInfo">
+			<form>	
+
+				<div class="pianoKind">
+					<label for="pianoKind">
+						<span>What Kind of Piano is it?</span>
+						<select ng-model="newLead.pianoKind" id="pianoKind" name="pianoKind" required>
+							<option>Grand</option>
+							<option>Console</option>
+							<option>Spinet</option>
+							<option>Old Upright</option>
+						</select>
+					</label>
+				</div>
+	
+				<div class="pianoBrand">
+					<span>What brand of Piano is it?</span>
+					<input name="brand" ng-model="newLead.pianoBrand" type="text" placeholder="Piano's Brand">
+				</div>
+				
+				<div class="pianoAge">
+					<label for="pianoKind">
+						<span>How old is your piano?</span>
+						<select ng-model="newLead.pianoAge" id="pianoAge" name="pianoAge" required>
+							<option>0-15 yrs</option>
+							<option>15-30 yrs</option>
+							<option>30-50 yrs</option>
+							<option>50-75 yrs</option>
+							<option>75+ yrs</option>
+						</select>
+					</label>
+				</div>
+				
+				<div class="lastTuned">
+					<label for="pianoKind">
+						<span>When was your piano last tuned?</span>
+						<select ng-model="newLead.lastTuned" id="lastTuned" name="lastTuned" required>
+							<option>0-1 yrs</option>
+							<option>1-2 yrs</option>
+							<option>3-5 yrs</option>
+							<option>5-10 yrs</option>
+							<option>10+ yrs</option>
+						</select>
+					</label>
+				</div>
+
+				<div class="workNeeded">
+					<span>What kind of work do you want done?</span> <br>
+					<input ng-model="newLead.tuning" type="checkbox" value="tuningCheckbox"> Tuning
+					<input ng-model="newLead.pitchRaise" type="checkbox" value="pitchRaiseCheckbox"> Pitch Raise
+					<input ng-model="newLead.repairs" type="checkbox" value="repairsCheckbox"> Repairs
+					<input ng-model="newLead.internalCleaning" type="checkbox" value="internalCleaningCheckbox"> Internal Cleaning
+					<input ng-model="newLead.regulation" type="checkbox" value="regulationCheckbox"> Regulation
+					<input ng-model="newLead.purchaseConsult" type="checkbox" value="purchaseConsultCheckbox"> Purchase Consult
+					<input ng-model="newLead.estimate" type="checkbox" value="estimateCheckbox"> Estimate
+					<input ng-model="newLead.appraisal" type="checkbox" value="appraisalCheckbox"> Appraisal
+					<input ng-model="newLead.other" type="checkbox" value="otherCheckbox"> Other
+					<input ng-model="newLead.comment" name="commentField" placeholder="Describe repairs or other work needed.">
+				</div>
+			</div>
+			</form>
+			<div class="submitButton">
+				<input ng-click="createLead(newLead)" type="submit" value="submit" placeholder="Submit Request">
+			</div>
+		</fieldset>
+	</form>
+
+</div>
+

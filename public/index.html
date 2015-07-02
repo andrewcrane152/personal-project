@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="tuneMyPiano">
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Tune My Piano</title>
+
+	<!-- ng-grid -->
+	<link rel="stylesheet" type="text/css" href="app/local-code/bower_components/ng-grid/ng-grid.css"/>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+
+</head>
+
+<body>
+	
+	<ng-view></ng-view>
+
+	<!-- Frameworks -->
+	<script src="app/local-code/bower_components/jquery/dist/jquery.js"></script>
+	<script src="app/local-code/bower_components/angular/angular.js"></script>
+	<script src="app/local-code/bower_components/angular-route/angular-route.js"></script>
+	<script src="app/local-code/bower_components/ng-grid/build/ng-grid.js"></script>
+
+
+	<!-- File References -->
+	<script src="app/app.js"></script>
+	<script src="app/views/claim/claim.js"></script>
+	<script src="app/views/intro/intro.js"></script>
+	<script src="app/views/request/request.js"></script>
+	<script src="app/views/register/register.js"></script>
+	<script src="app/services/mainService.js"></script>
+
+</body>
+</html>
