@@ -20,11 +20,30 @@ app.config(function($routeProvider){
 		templateUrl: 'app/views/claim/claim.html',
 		controller: 'claimCtrl'
 	})
+
+	.when('/claim2', {
+		templateUrl: 'app/views/claim/claim2.html',
+		controller: 'claimCtrl2',
+		resolve: {
+			getLeads: function($q, mainService){
+				var deferred = $q.defer();
+					console.log('resolve working');
+					mainService.readLead().then(function(response){
+					messages = response.data;
+					deferred.resolve(messages);
+				});
+				return deferred.promise;
+			}
+		}
+	})	
+
 	.when('/register', {
 		templateUrl: 'app/views/register/register.html',
 		controller: 'registerCtrl'
 	})
+
 	.otherwise({
 		redirectTo: '/intro'
 	})
+
 })

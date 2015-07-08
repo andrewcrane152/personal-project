@@ -33,7 +33,7 @@ angular.module('tuneMyPiano')
 				leadArr.push({
 					firstName: response.data[i].firstName,
 					city: response.data[i].city,
-					county: response.data[i].county,
+					county: response.data[i].county, 
 					state: response.data[i].state,
 					pianoKind: response.data[i].pianoKind,
 					pianoBrand: response.data[i].pianoBrand,

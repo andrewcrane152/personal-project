@@ -8,6 +8,18 @@ var port = 9898;
 var mongoUri = "mongodb://localhost:27017/db";
 var leadsCtrl = require('./controllers/leadsCtrl');
 var techniciansCtrl = require('./controllers/techniciansCtrl');
+// var sendgrid  = require('sendgrid')(cranium152, passw0rd);
+
+// sendgrid.send({
+//   to:       'utahpianotuning@gmail.com',
+//   from:     'utahpianotuning@gmail.com',
+//   subject:  'Hello World',
+//   text:     'My first email through SendGrid.'
+// }, function(err, json) {
+//   if (err) { return console.error(err); }
+//   console.log(json);
+// });
+
 
 var app = express();
 app.use(bodyParser.json());
